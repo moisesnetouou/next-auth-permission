@@ -1,8 +1,13 @@
 import { AuthContext } from '@/contexts/AuthContext'
-import { useContext } from 'react'
+import { api } from '@/services/api'
+import { useContext, useEffect } from 'react'
 
 export default function Dashboard() {
   const { user } = useContext(AuthContext)
+
+  useEffect(() => {
+    api.get('/me').then((response) => console.log(response))
+  }, [])
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
