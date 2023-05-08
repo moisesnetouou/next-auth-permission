@@ -22,11 +22,13 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <form onSubmit={handleSubmit} className="flex flex-col my-auto gap-2">
         <input
+          className="bg-slate-500"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
+          className="bg-slate-500"
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
